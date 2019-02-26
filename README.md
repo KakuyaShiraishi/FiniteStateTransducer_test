@@ -3,7 +3,7 @@
 Minimal Acyclic Subsequential Transducers を用いたFSTのサンプル
 
 
-#memo
+# memo
 ```cpp
 std::vector<std::pair<std::string, uint32_t>> input = {
   { "apr", 30 },

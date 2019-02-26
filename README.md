@@ -62,3 +62,50 @@ assert(ret[1].outputs[0] == 1);
 assert(ret[2].length == 7);
 assert(ret[2].outputs[0] == 2);
 ```
+
+### build
+
+```cpp
+std::vector<char> build(
+  const std::vector<std::string>& input)
+
+std::vector<char> build(
+  const std::vector<std::pair<std::string, std::string>>& input)
+
+std::vector<char> build(
+  std::function<void (
+    std::function<void (const std::string& str)> add_entry)> input);
+
+std::vector<char> build(
+  std::function<void (
+    std::function<void (const std::string& str, const std::string& value)> add_entry)> input);
+```
+
+### exact_match_search
+
+```cpp
+std::vector<std::string> exact_match_search(
+  const char* byte_code,
+  size_t      byte_code_size,
+  const char* str)
+
+bool exact_match_search(
+  const char*  byte_code,
+  size_t       byte_code_size,
+  const char*  str,
+  std::string& output)
+```
+
+### common_prefix_search
+
+```cpp
+struct CommonPrefixSearchResult {
+  size_t                   length;
+  std::vector<std::string> outputs;
+};
+
+std::vector<CommonPrefixSearchResult> common_prefix_search(
+  const char* byte_code,
+  size_t      byte_code_size,
+  const char* str)
+```
